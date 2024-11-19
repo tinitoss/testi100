@@ -1,0 +1,598 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Body Styling */
+body {
+  background-color: #001f3d; /* Dark Blue */
+  color: #fff;
+  line-height: 1.6;
+  font-size: 16px;
+  min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+  background-color: #001f3d; /* Dark Blue */
+  color: #fff;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+header .logo h1 {
+  font-size: 1.8rem;
+  color: #FFD700; /* Gold */
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin-top: 10px;
+}
+
+header nav ul li {
+  margin-right: 0.5rem; /* Reduced space between items */
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem; /* Further reduced padding */
+  font-size: 0.85rem; /* Smaller font size */
+  transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+  background-color: #FFD700; /* Gold */
+  color: #001f3d; /* Dark Blue */
+}
+
+.burger-menu {
+  display: none; /* Hidden by default */
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 0;
+  background-color: #001f3d; /* Dark Blue */
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: #FFD700; /* Gold */
+  margin-bottom: 1rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  background-color: #FFD700; /* Gold */
+  color: #001f3d; /* Dark Blue */
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cta-btn:hover {
+  background-color: #b58f3f; /* Slightly darker gold */
+}
+
+/* About Section */
+.about {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #0a2a47; /* Darker Blue */
+}
+
+.about h2 {
+  font-size: 2rem;
+  color: #FFD700; /* Gold */
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Services Section */
+.services {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #001f3d; /* Dark Blue */
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  color: #FFD700; /* Gold */
+  margin-bottom: 30px;
+}
+
+.service-card {
+  background-color: #0a2a47; /* Darker Blue */
+  color: #fff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  color: #FFD700; /* Gold */
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+/* Staff Section */
+.staff {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #0a2a47; /* Darker Blue */
+}
+
+.staff h2 {
+  font-size: 2.5rem;
+  color: #FFD700; /* Gold */
+  margin-bottom: 30px;
+}
+
+.staff-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.staff-member {
+  width: 250px;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: #0a2a47; /* Darker Blue */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.staff-member img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.staff-member h3 {
+  font-size: 1.5rem;
+  color: #FFD700; /* Gold */
+  margin-bottom: 10px;
+}
+
+.staff-member p {
+  color: #fff;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #001f3d; /* Dark Blue */
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  color: #FFD700; /* Gold */
+  margin-bottom: 30px;
+}
+
+.testimonial-carousel {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.testimonial-card {
+  background-color: #0a2a47; /* Darker Blue */
+  color: #fff;
+  padding: 20px;
+  margin: 0 10px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card h4 {
+  font-size: 1.1rem;
+  color: #FFD700; /* Gold */
+  margin-top: 10px;
+}
+
+/* Clients Section */
+.clients {
+  padding: 50px 20px;
+  background-color: #0a2a47; /* Darker Blue */
+}
+
+.clients h2 {
+  font-size: 2.5rem;
+  color: #FFD700; /* Gold */
+  margin-bottom: 30px;
+}
+
+.client-logos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.client-logos img {
+  width: 120px;
+  margin: 10px;
+  filter: brightness(0) invert(1);
+}
+
+/* Pricing Section */
+.pricing {
+  padding: 50px 20px;
+  background-color: #001f3d; /* Dark Blue */
+  text-align: center;
+}
+
+.pricing h2 {
+  font-size: 2.5rem;
+  color: #FFD700; /* Gold */
+  margin-bottom: 30px;
+}
+
+.pricing-card {
+  background-color: #0a2a47; /* Darker Blue */
+  color: #fff;
+  margin: 20px;
+  padding: 30px;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.pricing-card h3 {
+  font-size: 1.8rem;
+  color: #FFD700; /* Gold */
+  margin-bottom: 20px;
+}
+
+.pricing-card p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.pricing-card ul {
+  text-align: left;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.pricing-card ul li {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.pricing-card a {
+  background-color: #FFD700; /* Gold */
+  color: #001f3d; /* Dark Blue */
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.pricing-card a:hover {
+  background-color: #b58f3f; /* Slightly darker gold */
+}
+
+/* FAQ Section */
+.faq {
+  padding: 50px 20px;
+  background-color: #0a2a47; /* Darker Blue */
+  text-align: center;
+}
+
+.faq h2 {
+  font-size: 2.5rem;
+  color: #FFD700; /* Gold */
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  background-color: #001f3d; /* Dark Blue */
+  color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.faq-item h3 {
+  font-size: 1.5rem;
+  color: #FFD700; /* Gold */
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  font-size: 1.1rem;
+}
+
+/* Contact Section */
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #0a2a47; /* Darker Blue */
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  color: #FFD700; /* Gold */
+  margin-bottom: 30px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.contact button {
+  background-color: #FFD700; /* Gold */
+  color: #001f3d; /* Dark Blue */
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.contact button:hover {
+  background-color: #b58f3f; /* Slightly darker gold */
+}
+
+/* Media Queries for Mobile and Tablets */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: row; /* Keep the menu items horizontally */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  header nav ul li {
+    margin-right: 0.3rem; /* Further reduced space between nav items */
+  }
+
+  header nav ul li a {
+    padding: 0.2rem 0.5rem; /* Further reduced padding */
+    font-size: 0.75rem; /* Smaller font size */
+  }
+
+  .service-card,
+  .staff-member,
+  .pricing-card,
+  .testimonial-card {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .pricing-card a {
+    width: 100%;
+  }
+
+  .faq-item {
+    margin: 10px 0;
+  }
+
+  .contact form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .cta-btn {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .service-card h3,
+  .pricing-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .pricing-card ul li,
+  .faq-item p {
+    font-size: 1rem;
+  }
+
+  .contact button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+/* General Section Styling */
+.prodhuar {
+  padding: 50px 20px;
+  background-color: #001f3d; /* Dark Blue */
+  text-align: center;
+}
+
+.prodhuar h2 {
+  font-size: 2.5rem;
+  color: #FFD700; /* Gold */
+  margin-bottom: 30px;
+}
+
+/* Default Styles for Slider */
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  gap: 10px;
+}
+
+.slide {
+  flex: 0 0 auto; /* Ensures that slides do not stretch */
+  width: 20%; /* Default size for desktop */
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* Image Styling */
+.slide-img {
+  width: 100%; /* Ensure image fills the slide container */
+  height: auto;
+  object-fit: cover; /* Ensure images cover the area without distorting */
+  display: block;
+}
+
+/* Image Description Styling */
+.image-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .slider-container {
+    padding: 0 10px;
+  }
+
+  .slide {
+    width: 40% !important; /* For tablets, make the images larger */
+  }
+
+  .slide-img {
+    width: 100% !important;
+    object-fit: contain !important; /* Make sure images are contained and visible */
+  }
+
+  .image-description {
+    font-size: 16px !important; /* Increase text size for better readability on mobile */
+  }
+}
+
+/* Very Small Devices (Phones) */
+@media (max-width: 480px) {
+  .slider-container {
+    padding: 0 10px;
+  }
+
+  .slide {
+    width: 45% !important; /* Increase the width of each slide on mobile */
+  }
+
+  .slide-img {
+    width: 100% !important; /* Ensure images take full width */
+    object-fit: contain !important; /* Maintain image aspect ratio */
+  }
+
+  .image-description {
+    font-size: 18px !important; /* Larger text size for better readability on small screens */
+  }
+
+ /* Butonat e Slider-it */
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: 2px solid transparent; /* Krijon kufirin për butonat */
+  border-radius: 50%; /* Butonat kanë formë rrethore */
+  font-size: 2rem;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.7; /* Fillimisht, butonat janë pak më të transparencës */
+  transition: all 0.3s ease; /* Efekt kalimi për ndryshimin e pamjes */
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Ndryshon ngjyrën e butonit kur hidhet miu mbi të */
+  opacity: 1; /* Butoni bëhet më i qartë kur i kaloni me miun */
+  transform: translateY(-50%) scale(1.1); /* Efekti i madhësisë për butonat gjatë hover-it */
+  border-color: #FFD700; /* Shtimi i një kufiri të artë gjatë hover-it */
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+/* Butonat për pajisje mobile */
+@media (max-width: 768px) {
+  button {
+    font-size: 1.5rem; /* Përshtat madhësinë për ekranet mobile */
+    padding: 10px; /* Përshtat madhësinë për butonat në pajisje të vogla */
+  }
+}
+}
